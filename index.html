@@ -1,55 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Project</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
-</head>
-<body>
-    
-    <!-- Header Banner with Links -->
-    <div class="header">
-        <a href="#introduction">Introduction</a>
-        <a href="#descriptive-graphs">Descriptive Graphs</a>
-        <a href="#recommendations">Recommendations</a>
-        <a href="#key-maps">Key Maps</a>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Data Science Project</title>
+		<link rel="stylesheet" href="style.css" />
+		<!-- Link to the external CSS file -->
 
-    <!-- Title Section -->
-    <h1>Key Drivers of Consumer Buying Patterns: Location, Promotions, Demographics, and Loyalty</h1>
-    
-    <p id="main" style="margin-top: 100px;">Darin Materman, Bea Tugano, Michael Mehall</p>
+		<!-- Altair (Vega) imports -->
+		<style>
+			#vis.vega-embed {
+				width: 100%;
+				display: flex;
+			}
 
-    <h3 id="introduction">Introduction</h3>
-    <p id="main">Understanding how purchase behavior is influenced by various factors such as location, promotions, demographics, and loyalty is crucial for businesses aiming to optimize their marketing and sales strategies. Our analysis seeks to examine how these elements impact both the frequency of purchases and the size of baskets, providing insights into consumer decision-making processes. By examining these factors, we can glean insights into how businesses can tailor their approaches to better meet the needs and preferences of their target audience, in order to drive sales and increase customer satisfaction and loyalty. Succinctly, the question we’re looking to examine is: How is purchase behavior (frequency and basket size) impacted by buyer location, promotions, demographics, and loyalty?</p>
+			#vis.vega-embed details,
+			#vis.vega-embed details summary {
+				position: relative;
+			}
+		</style>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/vega@5"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/vega-embed@6"
+		></script>
+	</head>
+	<body>
+		<!-- Header Banner with Links -->
+		<div class="header">
+			<a href="#introduction">Introduction</a>
+			<a href="#descriptive-graphs">Descriptive Graphs</a>
+			<a href="#recommendations">Recommendations</a>
+			<a href="#key-maps">Key Maps</a>
+		</div>
 
-    <p></p>
+		<!-- Title Section -->
+		<h1>
+			Key Drivers of Consumer Buying Patterns: Location, Promotions,
+			Demographics, and Loyalty
+		</h1>
 
-    <!-- Descriptive Static Graphs Section -->
-    <h3 id="descriptive-graphs">Descriptive Static Graphs</h3>
-    
-    <h4>Figure 1: Distribution of Consumer Preferences by Product Category</h4>
-    <img src="your-graph-link-1.jpg" alt="Consumer Preferences Distribution" width="600">
-    <p><em>Description of the figure:</em></p>
+		<p id="main" style="margin-top: 100px">
+			Darin Materman, Bea Tugano, Michael Mehall
+		</p>
 
-    <h4>Figure 2: Price Sensitivity and Purchase Frequency</h4>
-    <img src="your-graph-link-2.jpg" alt="Price Sensitivity vs Frequency" width="600">
-    <p><em>Description of the figure:</em></p>
+		<h3 id="introduction">Introduction</h3>
+		<p id="main">
+			Understanding how purchase behavior is influenced by various factors
+			such as location, promotions, demographics, and loyalty is crucial
+			for businesses aiming to optimize their marketing and sales
+			strategies. Our analysis seeks to examine how these elements impact
+			both the frequency of purchases and the size of baskets, providing
+			insights into consumer decision-making processes. By examining these
+			factors, we can glean insights into how businesses can tailor their
+			approaches to better meet the needs and preferences of their target
+			audience, in order to drive sales and increase customer satisfaction
+			and loyalty. Succinctly, the question we’re looking to examine is:
+			How is purchase behavior (frequency and basket size) impacted by
+			buyer location, promotions, demographics, and loyalty?
+		</p>
 
-    <h4>Figure 3: Impact of Promotions on Buying Behavior</h4>
-    <img src="your-graph-link-3.jpg" alt="Impact of Promotions on Buying Behavior" width="600">
-    <p><em>Description of the figure:</em></p>
+		<h3 id="reference-papers">Reference Papers</h3>
+		<p>
+			<a
+				href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.697080/full?form=MG0AV3"
+			>
+				Frontiers | Factors Affecting Impulse Buying Behavior of
+				Consumers
+			</a>
+			<br />
+			This study examines various factors that influence impulse buying
+			behavior, which can be related to purchase frequency and basket
+			size.
+		</p>
+		<p>
+			<a
+				href="https://link.springer.com/chapter/10.1007/978-3-030-48861-1_8?form=MG0AV3"
+			>
+				Customer Purchase Behavior Prediction in E-commerce: A
+				Conceptual Framework and Research Agenda | SpringerLink
+			</a>
+			<br />
+			This paper provides a framework for predicting customer purchase
+			behavior in e-commerce, including the impact of location,
+			promotions, demographics, and loyalty.
+		</p>
+		<p>
+			<a
+				href="https://www.yupingliu.com/files/papers/liu_loyalty_program_effects.pdf?formCode=MG0AV3"
+			>
+				The Long-Term Impact of Loyalty Programs on Consumer Purchase
+				Behavior and Loyalty
+			</a>
+			<br />
+			This study examines the long-term effects of loyalty programs on
+			consumer behavior, including how these programs influence purchase
+			frequency and basket size over time.
+		</p>
 
+		<!-- Descriptive Static Graphs Section -->
+		<h3 id="descriptive-graphs">Descriptive Static Graphs</h3>
 
-    <h1>My Visualization</h1>
-    <iframe src="items_by_season.html" width="800" height="600" style="border:none;"></iframe>
-    
-    <h3 id="recommendations">Recommendations</h3>
-    <p>Here you can add your recommendations related to the key findings and how businesses can use these insights to improve their strategies.</p>
+		<h4>
+			Figure 1: Distribution of Consumer Preferences by Product Category
+		</h4>
+		<img
+			src="your-graph-link-1.jpg"
+			alt="Consumer Preferences Distribution"
+			width="600"
+		/>
+		<p><em>Description of the figure:</em></p>
 
-    <h3 id="key-maps">Key Maps</h3>
-    <p>Here you can add any maps or visual aids that help present key insights or trends identified in your project.</p>
+		<h4>Figure 2: Price Sensitivity and Purchase Frequency</h4>
+		<img
+			src="your-graph-link-2.jpg"
+			alt="Price Sensitivity vs Frequency"
+			width="600"
+		/>
+		<p><em>Description of the figure:</em></p>
 
-</body>
+		<h4>Figure 3: Impact of Promotions on Buying Behavior</h4>
+		<img
+			src="your-graph-link-3.jpg"
+			alt="Impact of Promotions on Buying Behavior"
+			width="600"
+		/>
+		<p><em>Description of the figure:</em></p>
+
+		<iframe
+			src="items_by_season.html"
+			width="800"
+			height="600"
+			style="border: none"
+		></iframe>
+		<p>Chart description</p>
+
+		<h3>Figure 5: Relationship between Demographics and Purchases</h3>
+		<iframe
+			src="h.html"
+			width="800"
+			height="450"
+			style="border: none"
+		></iframe>
+		<p>
+			For store owners, knowing the demographics for shopping behaviors
+			and trends are important in order to target consumers for online and
+			physical advertising. The chart shows the sales total purchase
+			amounts for the primary genders, divided into the purchase
+			categories. It can be seen that males spend nearly double overall
+			than females, outspending them in every product category. However,
+			for both males and females, the relative spending per category is
+			the same, ie clothing is the largest category, followed by
+			accessories, footwear, then outerwear. This suggests that males
+			spend more overall when shopping, with the largest product category
+			being clothing.
+		</p>
+
+		<h4 id="recommendations">Recommendations</h4>
+		<p>
+			Here you can add your recommendations related to the key findings
+			and how businesses can use these insights to improve their
+			strategies.
+		</p>
+
+		<h3 id="key-maps">Key Maps</h3>
+		<p>
+			Here you can add any maps or visual aids that help present key
+			insights or trends identified in your project.
+		</p>
+	</body>
 </html>
