@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "title": {"anchor": "start", "fontSize": 16}}, "data": {"name": "data-a912eccedd33386d15ff79bfd1abefb9"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "Category", "type": "nominal"}, {"field": "Count", "type": "quantitative"}], "x": {"field": "Category", "sort": "-y", "title": "Product Category", "type": "nominal"}, "y": {"field": "Count", "title": "Number of Consumers", "type": "quantitative"}}, "height": 400, "title": "Distribution of Consumer Preferences by Product Category", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-a912eccedd33386d15ff79bfd1abefb9": [{"Category": "Clothing", "Count": 1737}, {"Category": "Accessories", "Count": 1240}, {"Category": "Footwear", "Count": 599}, {"Category": "Outerwear", "Count": 324}, {"Category": "Clothing", "Count": 1737}, {"Category": "Accessories", "Count": 1240}, {"Category": "Footwear", "Count": 599}, {"Category": "Outerwear", "Count": 324}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
