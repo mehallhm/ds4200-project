@@ -69,27 +69,33 @@
 			buyer location, promotions, demographics, and loyalty?
 		</p>
 
-		<h2 id = "data-sources">Our Data</h2>
-		<p>The dataset is from Kaggle originally composed by Sir Sourav Banerjee 
-			at CogniTensor and last updated a year ago. It contains two tables 
-			covering demographic information, purchase history, product preference, 
-			and preferred shopping channels with the first table focusing on customer 
-			behavior while the second on customer trends. Both contain about 3900 
-			observations across 18 columns, including both categorical 
-			(such as gender, size, season) and continuous variables (purchase amount, age). 
-			Data is licensed under Creative Commons and thus is free to use. 
+		<h2 id="data-sources">Our Data</h2>
+		<p>
+			The dataset is from Kaggle originally composed by Sir Sourav
+			Banerjee at CogniTensor and last updated a year ago. It contains two
+			tables covering demographic information, purchase history, product
+			preference, and preferred shopping channels with the first table
+			focusing on customer behavior while the second on customer trends.
+			Both contain about 3900 observations across 18 columns, including
+			both categorical (such as gender, size, season) and continuous
+			variables (purchase amount, age). Data is licensed under Creative
+			Commons and thus is free to use.
 		</p>
 
-		<p>Our dataset on Retail and Consumer Purchase Behavior can be found <a href = "https://www.kaggle.com/datasets/zeesolver/consumer-behavior-and-shopping-habits-dataset/data">here</a>.
+		<p>
+			Our dataset on Retail and Consumer Purchase Behavior can be found
+			<a
+				href="https://www.kaggle.com/datasets/zeesolver/consumer-behavior-and-shopping-habits-dataset/data"
+				>here</a
+			>.
 		</p>
-			
-		
-		
 
 		<!-- Descriptive Static Graphs Section -->
 		<h2 id="descriptive-graphs">Initial Observations</h2>
 
-		<h3>Figure 1: Distribution of Consumer Preferences by Product Category</h3>
+		<h3>
+			Figure 1: Distribution of Consumer Preferences by Product Category
+		</h3>
 		<iframe
 			src="consumer_preferences_category.jpg"
 			alt="Consumer Preferences Distribution"
@@ -97,9 +103,17 @@
 			height="600"
 			style="border: none"
 		></iframe>
-		<p>Description of the figure: <em>This figure is a bar chart of the most preferred categories by shoppers. The figure shows the distribution of most commonly purchased categories across the whole dataset. Clothing is the most popular category while outerwear is the least populat category.</em></p>
+		<p>
+			<em>
+				This figure is a bar chart of the most preferred categories by
+				shoppers. The figure shows the distribution of most commonly
+				purchased categories across the whole dataset. Clothing is the
+				most popular category while outerwear is the least populat
+				category.
+			</em>
+		</p>
 
-		<h3>Figure 2: Distribution of Age </h3>
+		<h3>Figure 2: Distribution of Age</h3>
 		<iframe
 			src="Distribution_of_Age.jpg"
 			alt="Distribution of Purchasers by Age"
@@ -107,7 +121,15 @@
 			height="485"
 			style="border: none"
 		></iframe>
-		<p>Description of the figure:<em> This figure is a histogram of the count of purchasers by age. Each bin represents five years, and the elevent buckets encompass the whole dataset. Naturally, there are less younger buyer, however the count remains remarkably stable between ages 25 and 70.</em></p>
+		<p>
+			<em>
+				This figure is a histogram of the count of purchasers by age.
+				Each bin represents five years, and the elevent buckets
+				encompass the whole dataset. Naturally, there are less younger
+				buyer, however the count remains remarkably stable between ages
+				25 and 70.
+			</em>
+		</p>
 
 		<h3>Figure 3: Distribution of Purchase Amonut</h3>
 		<img
@@ -115,67 +137,87 @@
 			alt="Impact of Promotions on Buying Behavior"
 			width="850"
 		/>
-		<p>Description of the figure:<em> This figure is a histogram of the count of basket size across the dataset. Ranging from $20 to $100, the figure indicates a small parabolic trend, where more purchases occur at lower basket sizes ($20-$40), and higher basket sizes ($85+), while baskets in the middle occur with less frequency. This informs us that customers are often making large or small purchases, putting one or two things in their cart, or many.</em></p>
+		<p>
+			<em>
+				This figure is a histogram of the count of basket size across
+				the dataset. Ranging from $20 to $100, the figure indicates a
+				small parabolic trend, where more purchases occur at lower
+				basket sizes ($20-$40), and higher basket sizes ($85+), while
+				baskets in the middle occur with less frequency. This informs us
+				that customers are often making large or small purchases,
+				putting one or two things in their cart, or many.
+			</em>
+		</p>
 
 		<h3>Figure 4: Items Purchased By Season</h3>
 		<iframe
 			src="items_by_season.html"
 			width="850"
-			height="600"
+			height="500"
 			style="border: none"
 		></iframe>
-		<p>This chart shows the items purchased by season, where each item is colored
-			 by category. The viewer is able to switch between seasons or view them 
-			 in the aggregate in order to drill down onto more specific data. This 
-			 stacked bar chart shows that generally, clothing are the highest 
-			 purchased items, making up four out of the five most purchased items 
-			 across all seasons. As one would expect, the outerwear category sees 
-			 higher sales in the Fall and Winter compared to the summer and fall. 
-			 That being said, the dataset also comes with some key surprises. For 
-			 instance, Pants are the leading item in the summer, and skirt is one 
-			 of the lowest selling items of the summer. This is potentially due to 
-			 people planning their shopping ahead (buying pants for the fall because 
-			 they already bought skirts in the spring, which is corroborated in the data.)
+		<p>
+			This chart shows the items purchased by season, where each item is
+			colored by category. The viewer is able to switch between seasons or
+			view them in the aggregate in order to drill down onto more specific
+			data. This stacked bar chart shows that generally, clothing are the
+			highest purchased items, making up four out of the five most
+			purchased items across all seasons. As one would expect, the
+			outerwear category sees higher sales in the Fall and Winter compared
+			to the summer and fall. That being said, the dataset also comes with
+			some key surprises. For instance, Pants are the leading item in the
+			summer, and skirt is one of the lowest selling items of the summer.
+			This is potentially due to people planning their shopping ahead
+			(buying pants for the fall because they already bought skirts in the
+			spring, which is corroborated in the data.)
 		</p>
 
 		<h3>Figure 5: Relationship between Demographics and Purchases</h3>
 		<iframe
-			src="h.html"
-			width="800"
+			src="average_by_gender.html"
+			width="1000"
+			height="480"
 			style="border: none"
 		></iframe>
 		<p>
-			For store owners, knowing the demographics for shopping behaviors
-			and trends are important in order to target consumers for online and
-			physical advertising. The chart shows the sales total purchase
-			amounts for the primary genders, divided into the purchase
-			categories. It can be seen that males spend nearly double overall
-			than females, outspending them in every product category. However,
-			for both males and females, the relative spending per category is
-			the same, ie clothing is the largest category, followed by
-			accessories, footwear, then outerwear. This suggests that males
-			spend more overall when shopping, with the largest product category
-			being clothing.
+			The chart on the left shows the average spending across all
+			categories by gender. It can be seen that females spend on average
+			more than males by about $1. However, when looking at the broken up
+			bar chart on the right, the categories that females and males
+			primarily spend on are different. While females spend the most on
+			accessories, followed by clothing, footwear, and then finally
+			outerwear, males spend the most in footwear, followed by clothing,
+			accessories, and finally footwear. These differences can be observed
+			by selecting either a section or bar of the charts to highlight just
+			that category, or by selecting a gender by clicking on the grey
+			square in the center legend. This allows for an easier comparison
+			between categories in the same gender, or the same category.
+		</p>
+		<p>
+			The conclusions of this chart illistrate that stores should focus on
+			certain categories for each gender. For females accessories should
+			be prioritized while males spend more on footwear. Outerwear is the
+			least spent category for both, thus indicating that it should be
+			minimized in comparison to the other categories.
 		</p>
 
 		<h3 id="key-maps">Key Maps</h3>
-		<p>
-			<iframe
+		<iframe
 			src="choropleth_map.html"
 			width="800"
 			height="450"
 			style="border: none"
 		></iframe>
-		</p>
+		<p></p>
 
-		<h4 id="conclusions">Conclusions</h4>
+		<h2 id="conclusions">Conclusions</h2>
 		<p>
 			Here you can add your recommendations related to the key findings
 			and how businesses can use these insights to improve their
 			strategies.
 		</p>
 
-		<h3 id="reference-papers">Reference Papers</h3>
+		<h2 id="reference-papers">Reference Papers</h2>
 		<p>
 			<a
 				href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.697080/full?form=MG0AV3"
