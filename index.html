@@ -37,7 +37,7 @@
 		<div class="header">
 			<a href="#introduction">Introduction</a>
 			<a href="#data-sources">Our Data</a>
-			<a href="#descriptive-graphs">Descriptive Charts</a>
+			<a href="#descriptive-graphs">Descriptive Graphs</a>
 			<a href="#key-maps">Key Maps</a>
 			<a href="#conclusions">Conclusions</a>
 			<a href="#reference-papers">Reference Papers</a>
@@ -49,7 +49,7 @@
 			Demographics, and Loyalty
 		</h1>
 
-		<p id="main" style="margin-top: 100px">
+		<p id="main" style="margin-top: 150px">
 			Darin Materman, Bea Tugano, Michael Mehall
 		</p>
 
@@ -69,344 +69,152 @@
 			buyer location, promotions, demographics, and loyalty?
 		</p>
 
-		<h2 id="data-sources">Our Data</h2>
-		<p>
-			The dataset is from Kaggle originally composed by Sir Sourav
-			Banerjee at CogniTensor and last updated a year ago. It contains two
-			tables covering demographic information, purchase history, product
-			preference, and preferred shopping channels with the first table
-			focusing on customer behavior while the second on customer trends.
-			Both contain about 3900 observations across 18 columns, including
-			both categorical (such as gender, size, season) and continuous
-			variables (purchase amount, age). Data is licensed under Creative
-			Commons and thus is free to use.
+		<h2 id = "data-sources">Our Data</h2>
+		<p>The dataset is from Kaggle originally composed by Sir Sourav Banerjee 
+			at CogniTensor and last updated a year ago. It contains two tables 
+			covering demographic information, purchase history, product preference, 
+			and preferred shopping channels with the first table focusing on customer 
+			behavior while the second on customer trends. Both contain about 3900 
+			observations across 18 columns, including both categorical 
+			(such as gender, size, season) and continuous variables (purchase amount, age). 
+			Data is licensed under Creative Commons and thus is free to use. 
 		</p>
 
-		<p>
-			The columns / attributes of focus was the
-			<em>Purchase Amount (USD)</em> which encodes how much a particular
-			transaction was, the product <em>Category</em> which is either
-			Clothing, Accessories, Footwear, or Outerwear. Additonally,
-			<em>Gender</em> (Female or Male), <em>Age</em> (in years),<em>
-				Location
-			</em>
-			(State), <em>Item Purchased</em>, and <em>Season</em> of the
-			purchase were used in order to understand the demographics and time
-			period of purchases. Not used were the <em>Size</em> and
-			<em>Color</em> of the purchased item, or the <em>Customer Id</em>.
+		<p>Our dataset on Retail and Consumer Purchase Behavior can be found <a href = "https://www.kaggle.com/datasets/zeesolver/consumer-behavior-and-shopping-habits-dataset/data">here</a>.
 		</p>
-
-		<p>
-			Our dataset on Retail and Consumer Purchase Behavior can be found
-			<a
-				href="https://www.kaggle.com/datasets/zeesolver/consumer-behavior-and-shopping-habits-dataset/data"
-				>here</a
-			>.
-		</p>
+			
+		
+		
 
 		<!-- Descriptive Static Graphs Section -->
-		<h2 id="descriptive-graphs">Descriptive Charts</h2>
+		<h2 id="descriptive-graphs">Initial Observations</h2>
 
-		<h3>
-			Figure 1: Distribution of Consumer Preferences by Product Category
-		</h3>
+		<h3>Figure 1: Distribution of Consumer Preferences by Product Category</h3>
 		<iframe
-			src="consumer_preferences_category.jpg"
+			src="category_bar_html.html"
 			alt="Consumer Preferences Distribution"
 			width="850"
-			height="600"
+			height="515"
 			style="border: none"
 		></iframe>
-		<p>
-			<em>
-				This figure is a bar chart of the most preferred categories by
-				shoppers. The figure shows the distribution of most commonly
-				purchased categories across the whole dataset. Clothing is the
-				most popular category while outerwear is the least populat
-				category.
-			</em>
-		</p>
+		<p>Description of the figure: This figure is a bar chart of the most preferred categories by shoppers. The figure shows the distribution of most commonly purchased categories across the whole dataset. Clothing is the most popular category while outerwear is the least populat category.</p>
 
-		<h3>Figure 2: Distribution of Age</h3>
-		<svg id="histo" style="width: 960px; height: 500px"></svg>
-		<p>
-			<em>
-				This figure is a histogram of the count of purchasers by age.
-				Each bin represents five years, and the twelve buckets encompass
-				the whole dataset. Naturally, there are less younger buyer,
-				however the count remains remarkably stable between ages 25 and
-				70.
-			</em>
-		</p>
+		<h3>Figure 2: Distribution of Age </h3>
+		<iframe
+			src="age_histogram_chart.html"
+			alt="Distribution of Purchasers by Age"
+			width="850"
+			height="485"
+			style="border: none"
+		></iframe>
+		<p>Description of the figure: This figure is a histogram of the count of purchasers by age. Each bin represents five years, and the elevent buckets encompass the whole dataset. Naturally, there are less younger buyer, however the count remains remarkably stable between ages 25 and 70.</p>
 
 		<h3>Figure 3: Distribution of Purchase Amonut</h3>
-		<img
-			src="Distribution of Purchase Amount.jpg"
+		<iframe
+			src="purchase_amount_histogram_chart.html"
 			alt="Impact of Promotions on Buying Behavior"
 			width="850"
-		/>
-		<p>
-			<em>
-				This figure is a histogram of the count of basket size across
-				the dataset. Ranging from $20 to $100, the figure indicates a
-				small parabolic trend, where more purchases occur at lower
-				basket sizes ($20-$40), and higher basket sizes ($85+), while
-				baskets in the middle occur with less frequency. This informs us
-				that customers are often making large or small purchases,
-				putting one or two things in their cart, or many.
-			</em>
-		</p>
+			height="500"
+			style="border: none;"
+		></iframe>
+		<p>Description of the figure: This figure is a histogram of the count of basket size across the dataset. Ranging from $20 to $100, the figure indicates a small parabolic trend, where more purchases occur at lower basket sizes ($20-$40), and higher basket sizes ($85+), while baskets in the middle occur with less frequency. This informs us that customers are often making large or small purchases, putting one or two things in their cart, or many.</p>
 
 		<h3>Figure 4: Items Purchased By Season</h3>
 		<iframe
 			src="items_by_season.html"
 			width="850"
-			height="500"
+			height="600"
 			style="border: none"
 		></iframe>
-		<p>
-			This chart shows the items purchased by season, where each item is
-			colored by category. The viewer is able to switch between seasons or
-			view them in the aggregate in order to drill down onto more specific
-			data. This stacked bar chart shows that generally, clothing are the
-			highest purchased items, making up four out of the five most
-			purchased items across all seasons. As one would expect, the
-			outerwear category sees higher sales in the Fall and Winter compared
-			to the summer and fall. That being said, the dataset also comes with
-			some key surprises. For instance, Pants are the leading item in the
-			summer, and skirt is one of the lowest selling items of the summer.
-			This is potentially due to people planning their shopping ahead
-			(buying pants for the fall because they already bought skirts in the
-			spring, which is corroborated in the data.)
+		<p>This chart shows the items purchased by season, where each item is colored
+			 by category. The viewer is able to switch between seasons or view them 
+			 in the aggregate in order to drill down onto more specific data. This 
+			 stacked bar chart shows that generally, clothing are the highest 
+			 purchased items, making up four out of the five most purchased items 
+			 across all seasons. As one would expect, the outerwear category sees 
+			 higher sales in the Fall and Winter compared to the summer and fall. 
+			 That being said, the dataset also comes with some key surprises. For 
+			 instance, Pants are the leading item in the summer, and skirt is one 
+			 of the lowest selling items of the summer. This is potentially due to 
+			 people planning their shopping ahead (buying pants for the fall because 
+			 they already bought skirts in the spring, which is corroborated in the data.)
 		</p>
 
 		<h3>Figure 5: Relationship between Demographics and Purchases</h3>
 		<iframe
-			src="average_by_gender.html"
-			width="1000"
-			height="480"
+			src="h.html"
+			width="850"
+			height = "450"
 			style="border: none"
 		></iframe>
 		<p>
-			The chart on the left shows the average spending across all
-			categories by gender. It can be seen that females spend on average
-			more than males by about $1. However, when looking at the broken up
-			bar chart on the right, the categories that females and males
-			primarily spend on are different. While females spend the most on
-			accessories, followed by clothing, footwear, and then finally
-			outerwear, males spend the most in footwear, followed by clothing,
-			accessories, and finally footwear. These differences can be observed
-			by selecting either a section or bar of the charts to highlight just
-			that category, or by selecting a gender by clicking on the grey
-			square in the center legend. This allows for an easier comparison
-			between categories in the same gender, or the same category.
-		</p>
-		<p>
-			The conclusions of this chart illistrate that stores should focus on
-			certain categories for each gender. For females accessories should
-			be prioritized while males spend more on footwear. Outerwear is the
-			least spent category for both, thus indicating that it should be
-			minimized in comparison to the other categories.
+			For store owners, knowing the demographics for shopping behaviors
+			and trends are important in order to target consumers for online and
+			physical advertising. The chart shows the sales total purchase
+			amounts for the primary genders, divided into the purchase
+			categories. It can be seen that males spend nearly double overall
+			than females, outspending them in every product category. However,
+			for both males and females, the relative spending per category is
+			the same, ie clothing is the largest category, followed by
+			accessories, footwear, then outerwear. This suggests that males
+			spend more overall when shopping, with the largest product category
+			being clothing.
 		</p>
 
-		<h3 id="key-maps">Key Maps</h3>
-		<iframe
-			src="choropleth_map.html"
-			width="800"
+		<h2 id="key-maps">Key Maps</h2>
+		<p>
+			<iframe
+			src="choropleth_map_comparison.html"
+			width = "1500"
 			height="450"
 			style="border: none"
 		></iframe>
-		<p>
-			This figure shows a choropleth map of the United States with states
-			colored on the average spend. The hovering over each state reveals
-			more information about the average spend as well as the frequecy of
-			shopping.
 		</p>
+		<p>
+			This figure shows two side by side choropleth maps of the United States with states 
+			colored on the average spend and purcahse frequency. Hovering over each state reveals more information
+			about the average spend as well as the frequecy of shopping. States like Colorado and Wisconsin have both high frequency and 
+			low average basket price, meaning those are uniquely good states to target to increase average basket size.	Alaska, for 
+			instance, has high average spending, but below average purchase frequency, meaning they are a good target for increasing basket size.
+			This map shows places like Utah, Washington, and North Dakota as the ideal states, with above average purchase frequecy and basket spend.
 
 		<h2 id="conclusions">Conclusions</h2>
 		<p>
-			This analysis of consumer buying behavior has provided valuable
-			insights into the impact of key drivers such as location,
-			promotions, demographics, and loyalty on both the frequency of
-			purchases and basket size. By examining the dataset, we were able to
-			identify several significant trends that can inform how businesses
-			tailor their marketing strategies and optimize their sales
-			processes.
-		</p>
+		<p>This analysis of consumer buying behavior has provided valuable insights into the impact of key drivers such as location, promotions, demographics, and loyalty on both the frequency of purchases and basket size. By examining the dataset, we were able to identify several significant trends that can inform how businesses tailor their marketing strategies and optimize their sales processes.</p>
+
 		<p><strong>Impact of Demographics on Consumer Behavior</strong></p>
-		<p>
-			The relationship between consumer demographics (such as gender and
-			age) and purchase behavior was strikingly evident. Our analysis
-			showed that while males tend to spend more overall, their spending
-			patterns across categories are consistent with those of females,
-			with clothing being the dominant category. This suggests that while
-			demographic differences are important, the broad categories of
-			interest remain similar across genders. Furthermore, we observed
-			that younger consumers were underrepresented in the dataset, which
-			could suggest that marketing efforts should be adjusted to better
-			target this group through digital channels or tailored product
-			offerings.
-		</p>
+		<p>The relationship between consumer demographics (such as gender and age) and purchase behavior was strikingly evident. Our analysis showed that while males tend to spend more overall, their spending patterns across categories are consistent with those of females, with clothing being the dominant category. This suggests that while demographic differences are important, the broad categories of interest remain similar across genders. Furthermore, we observed that younger consumers were underrepresented in the dataset, which could suggest that marketing efforts should be adjusted to better target this group through digital channels or tailored product offerings.</p>
+
 		<p><strong>Role of Promotions in Shaping Purchase Behavior</strong></p>
-		<p>
-			Promotions played a significant role in influencing both the
-			frequency of purchases and the size of baskets. The data
-			demonstrated a parabolic trend, where a higher frequency of
-			purchases occurred in lower and higher basket sizes, with fewer
-			purchases made in the mid-range. This suggests that promotions can
-			be highly effective in driving either low-cost, frequent impulse
-			purchases or larger, more considered transactions. For retailers,
-			understanding these patterns can help in designing promotions that
-			align with consumer behavior, such as offering discounts for bulk
-			purchases or strategically timed sales that encourage larger
-			baskets.
-		</p>
+		<p>Promotions played a significant role in influencing both the frequency of purchases and the size of baskets. The data demonstrated a parabolic trend, where a higher frequency of purchases occurred in lower and higher basket sizes, with fewer purchases made in the mid-range. This suggests that promotions can be highly effective in driving either low-cost, frequent impulse purchases or larger, more considered transactions. For retailers, understanding these patterns can help in designing promotions that align with consumer behavior, such as offering discounts for bulk purchases or strategically timed sales that encourage larger baskets.</p>
+
 		<p><strong>Seasonal Trends and Product Preferences</strong></p>
-		<p>
-			Our exploration of seasonal trends revealed interesting dynamics in
-			how product categories are purchased throughout the year. As
-			expected, clothing remained the most consistently purchased item,
-			with outerwear peaking in the colder months. However, the summer
-			months saw an unexpected rise in pants sales, indicating that
-			consumers may be purchasing for future seasons. This highlights the
-			importance of anticipating consumer needs and adjusting inventory
-			and marketing strategies accordingly. For businesses, understanding
-			these trends allows them to better predict demand and optimize stock
-			levels, reducing overstocking or understocking issues.
-		</p>
+		<p>Our exploration of seasonal trends revealed interesting dynamics in how product categories are purchased throughout the year. As expected, clothing remained the most consistently purchased item, with outerwear peaking in the colder months. However, the summer months saw an unexpected rise in pants sales, indicating that consumers may be purchasing for future seasons. This highlights the importance of anticipating consumer needs and adjusting inventory and marketing strategies accordingly. For businesses, understanding these trends allows them to better predict demand and optimize stock levels, reducing overstocking or understocking issues.</p>
+
 		<p><strong>Consumer Loyalty and Long-Term Engagement</strong></p>
-		<p>
-			Loyalty programs and their long-term effects on consumer behavior
-			remain critical components of a business’s strategy. While our data
-			did not provide a direct measure of loyalty program participation,
-			the trends observed suggest that loyal customers are likely to spend
-			more over time, particularly in categories they prefer. This aligns
-			with existing literature on the importance of loyalty in fostering
-			repeat business. For companies, designing effective loyalty programs
-			that reward frequent shoppers can lead to an increase in both the
-			frequency and size of purchases.
-		</p>
+		<p>Loyalty programs and their long-term effects on consumer behavior remain critical components of a business’s strategy. While our data did not provide a direct measure of loyalty program participation, the trends observed suggest that loyal customers are likely to spend more over time, particularly in categories they prefer. This aligns with existing literature on the importance of loyalty in fostering repeat business. For companies, designing effective loyalty programs that reward frequent shoppers can lead to an increase in both the frequency and size of purchases.</p>
+
 		<p><strong>Key Insights for Businesses</strong></p>
-		<p>
-			Our analysis offers several practical recommendations for businesses
-			looking to optimize their strategies:
-		</p>
+		<p>Our analysis offers several practical recommendations for businesses looking to optimize their strategies:</p>
 		<ul>
-			<li>
-				<strong>Tailor Promotions to Consumer Behavior:</strong> By
-				understanding the seasonal and demographic factors influencing
-				purchase behavior, businesses can design targeted promotions
-				that encourage both small, frequent purchases and larger, less
-				frequent ones.
-			</li>
-			<li>
-				<strong>Leverage Demographic Data:</strong> Demographic data,
-				particularly gender and age, can be used to better target
-				marketing campaigns. Males spend more overall, so targeted
-				advertising in the right categories can drive higher sales.
-				Additionally, the underrepresentation of younger consumers in
-				the dataset suggests a potential market segment for digital and
-				mobile-based marketing strategies.
-			</li>
-			<li>
-				<strong>Optimize Inventory Based on Seasonal Trends:</strong>
-				The observed patterns in seasonal purchasing can help businesses
-				predict product demand more accurately. Planning inventory for
-				peak seasons and ensuring the right products are available at
-				the right time is crucial.
-			</li>
-			<li>
-				<strong>Invest in Loyalty Programs:</strong> Given the long-term
-				impact of loyalty on consumer spending, businesses should
-				consider investing in or enhancing their loyalty programs.
-				Providing rewards for frequent purchases, as well as
-				personalized offers, can increase both purchase frequency and
-				basket size.
-			</li>
+			<li><strong>Tailor Promotions to Consumer Behavior:</strong> By understanding the seasonal and demographic factors influencing purchase behavior, businesses can design targeted promotions that encourage both small, frequent purchases and larger, less frequent ones.</li>
+			<li><strong>Leverage Demographic Data:</strong> Demographic data, particularly gender and age, can be used to better target marketing campaigns. Males spend more overall, so targeted advertising in the right categories can drive higher sales. Additionally, the underrepresentation of younger consumers in the dataset suggests a potential market segment for digital and mobile-based marketing strategies.</li>
+			<li><strong>Optimize Inventory Based on Seasonal Trends:</strong> The observed patterns in seasonal purchasing can help businesses predict product demand more accurately. Planning inventory for peak seasons and ensuring the right products are available at the right time is crucial.</li>
+			<li><strong>Invest in Loyalty Programs:</strong> Given the long-term impact of loyalty on consumer spending, businesses should consider investing in or enhancing their loyalty programs. Providing rewards for frequent purchases, as well as personalized offers, can increase both purchase frequency and basket size.</li>
 		</ul>
+
 		<p><strong>Future Questions and Analysis</strong></p>
-		<p>
-			While this analysis offers significant insights into the factors
-			influencing consumer buying behavior, there are several areas where
-			further research could be beneficial:
-		</p>
+		<p>While this analysis offers significant insights into the factors influencing consumer buying behavior, there are several areas where further research could be beneficial:</p>
 		<ul>
-			<li>
-				<strong>Impact of Location on Purchase Behavior:</strong>
-				Although the dataset provides basic demographic information, it
-				lacks detailed geographic data that could reveal how location
-				influences buying behavior. Future analysis could examine
-				regional differences in product preferences, purchase frequency,
-				and basket size. Mapping purchase behavior by geographic
-				location could also provide insights into local trends and
-				inform location-specific marketing strategies.
-			</li>
-			<li>
-				<strong>Effect of Online vs. In-Store Purchases:</strong>
-				The dataset includes information on preferred shopping channels,
-				but it does not differentiate between online and in-store
-				purchases. A deeper dive into how these channels impact purchase
-				behavior could be crucial. For example, do consumers purchase
-				more when shopping online due to convenience, or do in-store
-				promotions lead to higher basket sizes? Understanding the
-				dynamics between these channels would help businesses better
-				align their strategies for both online and physical stores.
-			</li>
-			<li>
-				<strong>
-					Analysis of Impulse Purchases and Basket Composition:
-				</strong>
-				Impulse buying behavior is often tied to promotions, but there
-				may be additional factors at play. Future research could explore
-				how product placement, limited-time offers, or even store layout
-				contribute to impulse purchases. Additionally, analyzing basket
-				composition (e.g., what types of products are often bought
-				together) could reveal opportunities for cross-selling and
-				bundling strategies.
-			</li>
-			<li>
-				<strong>
-					Longitudinal Analysis of Customer Loyalty Programs:
-				</strong>
-				While this study provides a snapshot of consumer behavior, a
-				longitudinal analysis of customer loyalty programs would offer
-				deeper insights into how these programs influence purchase
-				behavior over time. Investigating customer retention rates, the
-				impact of rewards on spending, and changes in basket size as a
-				result of loyalty benefits could lead to more refined strategies
-				for retaining high-value customers.
-			</li>
-			<li>
-				<strong>
-					Impact of Social Media and Digital Advertising on Purchases:
-				</strong>
-				With the increasing role of digital advertising and social media
-				in shaping consumer behavior, future research could examine how
-				these platforms influence the frequency and size of purchases.
-				Do targeted social media ads or influencer partnerships lead to
-				larger purchases, or do they primarily drive smaller, impulse
-				buys? Understanding this relationship could help businesses
-				optimize their digital marketing efforts.
-			</li>
-			<li>
-				<strong>Ethical Considerations and Consumer Privacy:</strong> As
-				businesses increasingly rely on data analytics to understand
-				consumer behavior, there are important ethical questions
-				regarding data privacy and consumer consent. Future studies
-				should address the ethical implications of data collection,
-				ensuring that businesses balance personalization with consumer
-				privacy rights. Analyzing consumer trust in data usage could
-				also influence how businesses implement their marketing
-				strategies.
-			</li>
+		<li><strong>Impact of Location on Purchase Behavior:</strong> Although the dataset provides basic demographic information, it lacks detailed geographic data that could reveal how location influences buying behavior. Future analysis could examine regional differences in product preferences, purchase frequency, and basket size. Mapping purchase behavior by geographic location could also provide insights into local trends and inform location-specific marketing strategies.</li>
+		<li><strong>Effect of Online vs. In-Store Purchases:</strong> The dataset includes information on preferred shopping channels, but it does not differentiate between online and in-store purchases. A deeper dive into how these channels impact purchase behavior could be crucial. For example, do consumers purchase more when shopping online due to convenience, or do in-store promotions lead to higher basket sizes? Understanding the dynamics between these channels would help businesses better align their strategies for both online and physical stores.</li>
+		<li><strong>Analysis of Impulse Purchases and Basket Composition:</strong> Impulse buying behavior is often tied to promotions, but there may be additional factors at play. Future research could explore how product placement, limited-time offers, or even store layout contribute to impulse purchases. Additionally, analyzing basket composition (e.g., what types of products are often bought together) could reveal opportunities for cross-selling and bundling strategies.</li>
+		<li><strong>Longitudinal Analysis of Customer Loyalty Programs:</strong> While this study provides a snapshot of consumer behavior, a longitudinal analysis of customer loyalty programs would offer deeper insights into how these programs influence purchase behavior over time. Investigating customer retention rates, the impact of rewards on spending, and changes in basket size as a result of loyalty benefits could lead to more refined strategies for retaining high-value customers.</li>
+		<li><strong>Impact of Social Media and Digital Advertising on Purchases:</strong> With the increasing role of digital advertising and social media in shaping consumer behavior, future research could examine how these platforms influence the frequency and size of purchases. Do targeted social media ads or influencer partnerships lead to larger purchases, or do they primarily drive smaller, impulse buys? Understanding this relationship could help businesses optimize their digital marketing efforts.</li>
+		<li><strong>Ethical Considerations and Consumer Privacy:</strong> As businesses increasingly rely on data analytics to understand consumer behavior, there are important ethical questions regarding data privacy and consumer consent. Future studies should address the ethical implications of data collection, ensuring that businesses balance personalization with consumer privacy rights. Analyzing consumer trust in data usage could also influence how businesses implement their marketing strategies.</li>
 		</ul>
-		<p>
-			In conclusion, while this analysis provides actionable insights for
-			businesses to refine their marketing strategies, the evolving nature
-			of consumer behavior and market conditions suggests that continued
-			research is essential. Future studies will help businesses stay
-			ahead of trends, improve customer experiences, and ultimately drive
-			higher sales and long-term loyalty.
+		In conclusion, while this analysis provides actionable insights for businesses to refine their marketing strategies, the evolving nature of consumer behavior and market conditions suggests that continued research is essential. Future studies will help businesses stay ahead of trends, improve customer experiences, and ultimately drive higher sales and long-term loyalty.</p>
+
 		</p>
 
 		<h2 id="reference-papers">Reference Papers</h2>
@@ -448,24 +256,22 @@
 		</p>
 
 		<script>
-			// Offset scroll position by 60px
-			document.querySelectorAll(".header a").forEach((anchor) => {
-				anchor.addEventListener("click", function (e) {
-					e.preventDefault();
-
-					const targetId = this.getAttribute("href").substring(1);
-					const targetElement = document.getElementById(targetId);
-
-					// Scroll with a 60px offset
-					window.scrollTo({
-						top: targetElement.offsetTop - 100,
-						behavior: "smooth",
-					});
+			// Offset scroll position by px
+			document.querySelectorAll('.header a').forEach(anchor => {
+			  anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				
+				const targetId = this.getAttribute('href').substring(1);
+				const targetElement = document.getElementById(targetId);
+				
+				// Scroll with a 60px offset
+				window.scrollTo({
+				  top: targetElement.offsetTop - 150,
+				  behavior: 'smooth'
 				});
+			  });
 			});
-		</script>
-
-		<script src="https://d3js.org/d3.v7.min.js"></script>
-		<script src="./age_histo.js"></script>
+		  </script>
+		  
 	</body>
 </html>
