@@ -471,12 +471,34 @@
 			});
 		</script>
 
-		<script text="text/javascript" src="./figure1.js"></script>
 		<script type="text/javascript" src="./figure2.js"></script>
-		<script text="text/javascript" src="./figure3.js"></script>
-		<script text="text/javascript" src="./figure4_1.js"></script>
-		<script text="text/javascript" src="./figure4_2.js"></script>
-		<script type="text/javascript" src="./figure5.js"></script>
-		<script type="text/javascript" src="./figure6.js"></script>
+		<script text="text/javascript" src="./figure6.js"></script>
+		<script text="text/javascript">
+			function vEmbed(vegaEmbed, id, spec) {
+				var embedOpt = { mode: "vega-lite" };
+
+				function showError(el, error) {
+					el.innerHTML =
+						'<div style="color:red;">' +
+						"<p>JavaScript Error: " +
+						error.message +
+						"</p>" +
+						"<p>This usually means there's a typo in your chart specification. " +
+						"See the javascript console for the full traceback.</p>" +
+						"</div>";
+					throw error;
+				}
+				const el = document.getElementById(id);
+				vegaEmbed("#" + id, spec, embedOpt).catch((error) =>
+					showError(el, error)
+				);
+			}
+
+			vEmbed(vegaEmbed, "figure1", "./figure1.json");
+			vEmbed(vegaEmbed, "figure3", "./figure3.json");
+			vEmbed(vegaEmbed, "figure4_1", "./figure4_1.json");
+			vEmbed(vegaEmbed, "figure4_2", "./figure4_2.json");
+			vEmbed(vegaEmbed, "figure5", "./figure5.json");
+		</script>
 	</body>
 </html>
